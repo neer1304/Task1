@@ -11,6 +11,12 @@ public class Task1 {
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter number of strings:- ");
     int num = sc.nextInt();
+    if(num<1)
+    {
+      System.out.println("Number of strings less than 1 exiting..");
+      sc.close();
+      return;
+    }
     List<String> strList = new LinkedList<String>();
     for(int i=1;i<=num;i++)
     {
@@ -23,5 +29,6 @@ public class Task1 {
     for(int i=0;i<num;i++)
       System.out.print(strList.get(i)+" ");
     sc.close();
+    return;
   }
 }
